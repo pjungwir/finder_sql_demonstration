@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a little Rails app to demonstrate Rails `includes` vs `preload` vs `eager_load` for [a Stack Overflow question](http://stackoverflow.com/questions/40005563/has-many-finder-sql-replacement-in-rails-4-2).
 
-Things you may want to cover:
+Just do this:
 
-* Ruby version
+    bundle install
+    RAILS_ENV=test rake db:migrate
+    rspec spec
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If you tail the test log you can see what SQL Rails is building.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
